@@ -1,5 +1,5 @@
 let jwt = require("jsonwebtoken");
-let secret = 'some-secret';
+let secret = process.env.SECRET;
 jwt.verify('token-here', secret, { algorithms: ['RS256', 'none'] }, function(err, payload) {
     console.log(payload);
 });
